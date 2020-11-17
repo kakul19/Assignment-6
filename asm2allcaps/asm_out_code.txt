@@ -1,0 +1,22 @@
+EXTERN _GETSTDHANDLE@4
+
+SECTION .DATA
+        STR:     DB 'HELLO, WORLD',0X0D,0X0A
+        STRLEN:  EQU $-STR
+
+MVI D, 01 				
+MVI E, 01 				
+LDA 2050 				
+SUB D					
+JZ 2011					
+					
+INR D 					
+					
+					
+INR E 					
+JMP 2007				
+MOV A, E				
+STA 3050				
+HLT					
+					
+

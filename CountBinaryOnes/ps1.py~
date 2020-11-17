@@ -1,4 +1,4 @@
-#Function to calculate number of 1's in binary representation
+#Function to calculate number of 1's in binary representation of a number
 
 def count_ones(n):
     count=0         #Initializing count to store number of 1's 

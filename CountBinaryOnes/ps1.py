@@ -12,8 +12,8 @@ def count_ones(n):
 a=int(input("Enter the first number: "))    #Take the input of first number
 b=int(input("Enter the second number: "))   #Take the input of second number
 
-A=count_ones(a)                             #Count number of 1s in first number
-B=count_ones(b)                             #Count number of 1s in second number
+A=count_ones(a)                             #Calculate number of 1s in first number
+B=count_ones(b)                             #Calculate number of 1s in second number
 
 #Printing the output in desired format
 
