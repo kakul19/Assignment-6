@@ -6,21 +6,19 @@
 %%
 [;].* {fprintf(yyout, "");}
 
-[a-z] {printf(yyout,"%c",yytext[0]-32);}
+[a-z] {fprintf(yyout,"%c",yytext[0]-32);}
 
 . {fprintf(yyout, "%s", yytext); }
 %%
 
 yywrap();
 
-int main()
+int main(char **argcv)
 {
 
 	extern FILE *yyin, *yyout; 
-  
-    yyin = fopen("asm_code.txt", "r"); 
-  
-    yyout = fopen("asm_out_code.txt", "w"); 
+  	yyin = fopen(argcv[1], "r"); 
+  	yyout = fopen(argcv[2], "w"); 
 	yylex();
 	return 0;
 

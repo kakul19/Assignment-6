@@ -13,14 +13,12 @@
 
 yywrap();
 
-int main()
+int main(int argc, char **argv)
 {
 
 	extern FILE *yyin, *yyout; 
-  
-    yyin = fopen("asm_code.txt", "r"); 
-  
-    yyout = fopen("asm_out_code.txt", "w"); 
+  	yyin = fopen(argv[1], "r"); 
+  	yyout = fopen(argv[2], "w"); 
 	yylex();
 	return 0;
 
