@@ -1,0 +1,34 @@
+%{
+#include<stdio.h>
+void yyerror(const char *str) 
+{ 
+printf("\nSequence Rejected\n");		 
+} 
+%}
+
+%token COMMENT LOWER CORRECT
+
+%%
+program:
+       LOWER 
+	{
+		printf("%c", yylval-32);
+	}
+	;
+
+program2:
+	COMMENT
+	{
+		printf("");
+	}
+	;
+%%
+
+int main()
+
+{
+
+	yyparse();
+
+	return 0;
+}

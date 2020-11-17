@@ -1,0 +1,33 @@
+%{ 
+
+#include<stdio.h>
+#include<string.h>
+ #include "y.tab.h"
+
+
+%}
+
+%%
+[;].* {
+return COMMENT;}
+
+[a-z]+ {yylval.string =strdup(yytext);
+return LOWER;}
+
+. {return CORRECT;}
+%%
+
+/*
+int main()
+{
+
+	extern FILE *yyin; 
+  
+    yyin = fopen("asm_code.txt", "r"); 
+  
+	yylex();
+	return 0;
+
+}
+
+*/
