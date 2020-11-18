@@ -440,7 +440,7 @@ int yy_flex_debug = 0;
 char *yytext;
 #line 1 "ps2.l"
 #line 2 "ps2.l"
- // #include "y.tab.h"
+ #include<stdio.h>
 
 #line 446 "lex.yy.c"
 #line 447 "lex.yy.c"
@@ -1759,6 +1759,5 @@ int main(int argc, char **argv)
 	return 0;
 
 }
-
 
 

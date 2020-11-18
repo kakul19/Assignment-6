@@ -13,12 +13,12 @@
 
 yywrap();
 
-int main(char **argcv)
+int main(int argc, char **argv)
 {
 
 	extern FILE *yyin, *yyout; 
-  	yyin = fopen(argcv[1], "r"); 
-  	yyout = fopen(argcv[2], "w"); 
+  	yyin = fopen(argv[1], "r"); 
+  	yyout = fopen(argv[2], "w"); 
 	yylex();
 	return 0;
 
